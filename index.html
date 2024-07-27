@@ -3,8 +3,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="message"></div>
+    <input type="text" class="hidden" name="" id="">
+    <button type="button">Start</button>
+    <script>
+        const message=document.querySelector('.message')
+        const guess=document.querySelector('input')
+        const button=document.querySelector('button')
+        const myArray=["سحر","نسترن","محمود","حسین","علی","اصغر","ایمان","مینا","ارزو"]
+        let inPlay=false
+        button.addEventListener('click',function(){
+            console.log("clicked");
+            if(!inPlay){
+                inPlay=true
+                button.innerHTML="Guess"
+                guess.classList.toggle('hidden')
+            }
+        })
+    </script>
 </body>
 </html>
